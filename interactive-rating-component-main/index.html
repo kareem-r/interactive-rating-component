@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+    
+    .box{
+      background-color: #1c232d;
+      width: 350px;
+      padding: 20px;
+      border-radius: 15px;
+    }
+  @media(max-width:376px){
+    .box{
+      width: 320px;
+    }
+  }
+    .box img{
+      background-color: #262e39;
+    padding: 12px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+    
+    .box ul{
+      list-style: none;
+    display: flex;
+    gap: 35px;
+    margin-left: -45px;
+    }
+    .box ul li{
+      width: 20px;
+      height: 20px;
+      background-color: #262e39;
+      text-align: center;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      color: white;
+    }
+    .box .sub{
+      margin: auto;
+      display: block;
+      align-items: center;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      background-color: #ff740e;
+      padding: 10px;
+      border-radius: 30px;
+    }
+    .box h2{
+      color: white;
+      font-weight: bold;
+      font-size: 24px
+    }
+    .box ul li:hover{
+      background-color: #ff740e;
+    }
+    .box p{
+      color: #7c8898;
+    }
+    .box-back{
+      
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+    width: 300px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #1c232d;
+    }
+    #p{
+      color: #ff740e;
+    background-color: #262e39;
+    padding: 7px;
+    width: 145px;
+    text-align: center;
+    border-radius: 30px;
+    align-items: center;
+    margin: auto;
+    margin-top: 15px;
+    }
+    .box-back h2{
+      color: white;
+    }
+    .box-back .p{
+      text-align: center;
+      color: #7c8898;
+    }
+    .card{
+      display: flex;
+    flex-direction: column;
+    gap: 11px;
+    }
+    .box ul li a{
+      text-decoration: none;
+      color: white;
+    }
+    .box .sub:hover{
+background-color: white;
+color: #ff740e;
+    }
+   .box ul li.active{
+      background-color: #ff740e;
+    }
+  </style>
+  <link rel="stylesheet" href="../bondi/css/all.min.css">
+</head>
+<body>
+
+  <!-- Rating state start -->
+
+  How did we do?
+
+  Please let us know how we did with your support request. All feedback is appreciated 
+  to help us improve our offering!
+
+  1 2 3 4 5
+
+  Submit
+
+  <!-- Rating state end -->
+
+  <!-- Thank you state start -->
+
+  You selected <!-- Add rating here --> out of 5
+
+  Thank you!
+
+  We appreciate you taking the time to give a rating. If you ever need more support, 
+  don’t hesitate to get in touch!
+
+  <!-- Thank you state end -->
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Kareem Badawy</a>.
+  </div>
+  <div class="card" style="position: relative;">
+    <div class="box" style="display: block;">
+    
+      <img src="./images/icon-star.svg" alt="">
+      <h2>How did we do?</h2>
+      <p>Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!</p>
+        <ul>
+          <li class="active">1 </li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+        </ul>
+        <a class="sub" href="#">Submit</a>
+    </div>
+    <div class="box-back" style="display: none;">
+      <img src="./images/illustration-thank-you.svg" alt="">
+      <p id="p">you selected <span id="num">1</span> for 5</p>
+      <h2>Thank you!</h2>
+      <p class="p">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+
+    </div>
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>
